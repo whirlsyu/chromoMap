@@ -192,8 +192,8 @@ var plot_padding = 15;
 //  .startAngle(Math.PI/2)
 //  .endAngle((3*Math.PI)/2);
 
-
-
+// This will clear the div before reload, otherwise it will produce replicated plots in shiny R apps.
+d3.select("#"+div_id).selectAll("*").remove();
 
 var chmap_div = d3.select("#"+div_id);
 
